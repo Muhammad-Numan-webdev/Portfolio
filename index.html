@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Numan | Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/TextPlugin.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#home" class="logo">
+                    <div class="logo-icon">MN</div>
+                    <span>Muhammad Numan</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#journey">Journey</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="particles-container" id="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 id="hero-title">Hi, I'm <span class="accent-text">Muhammad Numan</span></h1>
+                <h2 id="hero-subtitle">Full Stack Developer</h2>
+                <!-- <div class="hero-typing" id="typing-text">
+                    Building digital experiences that <span id="typing-content"></span><span class="cursor"></span>
+                </div> -->
+                <p>I create exceptional web applications using modern technologies. With expertise in both frontend and
+                    backend development, I bring ideas to life with clean code and innovative solutions.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> View Projects
+                    </a>
+                    <a href="image/My-CV.pdf" download="image/My-CV.pdf" class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About <span class="accent-text">Me</span></h2>
+            <div class="about-content">
+                <div class="about-img" data-aos="fade-right">
+                    <img src="image/retouch.jpg" alt="Muhammad Numan">
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <h3>Aspiring Web Developer & Tech Enthusiast</h3>
+                    <p>I am an enthusiastic and dedicated Web Developer currently pursuing my Software Engineering
+                        degree.
+                        My journey started with designing responsive web interfaces and has evolved into building
+                        database-driven applications with clean code and structured layouts.</p>
+                    <p>What drives me is the challenge of turning ideas into functional web applications. I focus on
+                        writing clean, maintainable code and continuously learning new technologies to improve my
+                        development skills.</p>
+                    <p>When I'm not coding, I like to explore new programming trends, practice problem-solving, and
+                        build personal projects to sharpen my practical knowledge.</p>
+
+                    <div class="about-stats">
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="stat-number" id="projects-count">03+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="stat-number" id="clients-count">4+</div>
+                            <div class="stat-label">Years of Learning</div>
+                        </div>
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="stat-number" id="experience-count">100%</div>
+                            <div class="stat-label">Dedication</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">My <span class="accent-text">Skills</span></h2>
+            <div class="skills-container">
+                <!-- Frontend Skills -->
+                <div class="skill-category glass-card" data-aos="fade-up">
+                    <h3><i class="fas fa-code"></i> Frontend</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-name">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-name">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="92"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-name">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript ES6+</span>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-name">
+                                <i class="fa-brands fa-bootstrap"></i>
+                                <span>Bootstrap</span>
+                            </div>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="88"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Skills -->
+                <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-name">
+                                <i class="fa-brands fa-php"></i>
+
+                                <span>PHP</span>
+                            </div>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="92"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-name">
+                                <i class="fa-brands fa-laravel"></i>
+                                <span>Laravel</span>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-name">
+                                <i class="fas fa-cloud"></i>
+                                <span>REST API</span>
+                            </div>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="88"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database Skills -->
+                <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fas fa-database"></i> Database</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-name">
+                                <i class="fas fa-database"></i>
+                                <span>MySQL</span>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-name">
+                                <i class="fa-solid fa-terminal"></i>
+                                <span>SQL Queries</span>
+                            </div>
+                            <span class="skill-percentage">82%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="82"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-name">
+                                <i class="fa-solid fa-server"></i>
+                                <span>Database Management</span>
+                            </div>
+                            <span class="skill-percentage">78%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="78"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Others -->
+                <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3><i class="fas fa-tools"></i> Tools & Others</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-name">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git & GitHub</span>
+                            </div>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="92"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-name">
+                                <i class="fas fa-code"></i>
+                                <span>VS Code</span>
+                            </div>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-name">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Postman</span>
+                            </div>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-name">
+                                <i class="fa-solid fa-hard-drive"></i>
+                                <span>XAMPP</span>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Featured <span class="accent-text">Projects</span></h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass-card" data-aos="fade-up">
+                    <div class="project-number">01</div>
+                    <img src="image/275011925_1848888971974473_2879465290109500713_n.webp" alt="Prime Fitness"
+                        class="project-img">
+                    <div class="project-overlay">
+                        <div class="project-content">
+                            <h3>Prime Fitness</h3>
+                            <p>Designed and developed a modern, fully responsive fitness website featuring engaging
+                                layouts, service sections, and smooth user navigation to promote health and workout
+                                routines.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">SASS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://primefitness-numan.netlify.app/" target="_blank" class="btn"><i
+                                        class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-number">02</div>
+                    <img src="image/patrona.jpg" alt="Patrona Puppy" class="project-img">
+                    <div class="project-overlay">
+                        <div class="project-content">
+                            <h3>Patrona Puppy</h3>
+                            <p>Created an attractive, user-friendly pet-themed website with clean UI design, engaging
+                                visuals, and structured layouts tailored for pet lovers.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">SASS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://patrona-puppy-numan.netlify.app/" target="_blank" class="btn"><i
+                                        class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-number">03</div>
+                    <img src="image/crud.webp" alt="Student Management System" class="project-img">
+                    <div class="project-overlay">
+                        <div class="project-content">
+                            <h3>Books Management System</h3>
+                            <p>A powerful backend system that allows administrators to manage book records. It
+                                performs full Create, Read, Update, and Delete (CRUD) operations securely using MySQL.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MYSQL</span>
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://book-management.kesug.com/add.php" target="_blank" class="btn"><i
+                                        class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-number">04</div>
+                    <img src="image/staff.jpg" alt="Staff Management System" class="project-img">
+                    <div class="project-overlay">
+                        <div class="project-content">
+                            <h3>Staff Management System</h3>
+                            <p>A powerful backend system that allows administrators to manage Staff records. It
+                                performs full Create, Read, Update, and Delete (CRUD) operations securely using MySQL.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">MYSQL</span>
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://staff-management.kesug.com/" target="_blank" class="btn"><i
+                                        class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="journey">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">My <span class="accent-text">Journey</span></h2>
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-date"><i class="far fa-calendar"></i>2025 – Present</div>
+                        <h3>Full-Stack / Laravel Developer</h3>
+                        <!-- <h4>Tech Innovations Inc.</h4> -->
+                        <p>Building responsive web applications using HTML, CSS, JavaScript, PHP, and Laravel, with a
+                            strong focus on MySQL database management.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-date"><i class="far fa-calendar"></i>2024 – 2025</div>
+                        <h3>Web Development Learning & Practice</h3>
+                        <!-- <h4>Digital Solutions Agency</h4> -->
+                        <p>Mastered core programming concepts, designed user interfaces with Bootstrap, and learned
+                            backend integration with databases.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-date"><i class="far fa-calendar"></i> 2023 – 2024</div>
+                        <h3>Started Coding Journey</h3>
+                        <!-- <h4>WebCraft Studios</h4> -->
+                        <p>Learned the fundamentals of programming, logic building, and explored how websites and
+                            databases work behind the scenes.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-date"><i class="far fa-calendar"></i> 2025 – Present</div>
+                        <h3>Bachelor in Software Engineering</h3>
+                        <h4>Virtual University of Pakistan</h4>
+                        <p>Currently pursuing a degree in Software Engineering, focusing on core programming, software
+                            engineering principles, and databases.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get In <span class="accent-text">Touch</span></h2>
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Let's Create Something Amazing!</h3>
+                    <p>I'm always open to discussing new opportunities, interesting projects, or just chatting about
+                        technology and development.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>m.numan.webdev@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+92 328 3571282</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Mossamiyat, Karachi</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Available for freelance work</span>
+                        </div>
+                    </div>
+
+                    <h3>Connect With Me</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-codepen"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-dev"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder=" " required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder=" " required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder=" ">
+                            <label for="subject">Subject (Optional)</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="6" placeholder=" " required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary form-submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="accent-text">Muhammad Numan</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Muhammad Numan. All Rights Reserved. | Made with <i class="fas fa-heart"></i> and <i
+                        class="fas fa-code"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+    <script>
+
+
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 1000,
+            offset: 100,
+            once: false,
+            mirror: true
+        });
+
+        // Initialize Particles.js
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize particles background
+            particlesJS('particles', {
+                particles: {
+                    number: { value: 80, density: { enable: true, value_area: 800 } },
+                    color: { value: "#00d9ff" },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.5, random: true },
+                    size: { value: 3, random: true },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: "#0066ff",
+                        opacity: 0.2,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 2,
+                        direction: "none",
+                        random: true,
+                        straight: false,
+                        out_mode: "out",
+                        bounce: false
+                    }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: { enable: true, mode: "repulse" },
+                        onclick: { enable: true, mode: "push" }
+                    }
+                },
+                retina_detect: true
+            });
+
+            // Hero typing animation
+            // const typingContent = document.getElementById('typing-content');
+            // const typingStrings = [
+            //     'solve real problems.',
+            //     'create seamless experiences.',
+            //     'push technical boundaries.',
+            //     'deliver exceptional value.'
+            // ];
+            // let stringIndex = 0;
+            // let charIndex = 0;
+            // let isDeleting = false;
+
+            // function typeWriter() {
+            //     const currentString = typingStrings[stringIndex];
+
+            //     if (isDeleting) {
+            //         typingContent.textContent = currentString.substring(0, charIndex - 1);
+            //         charIndex--;
+            //     } else {
+            //         typingContent.textContent = currentString.substring(0, charIndex + 1);
+            //         charIndex++;
+            //     }
+
+            //     if (!isDeleting && charIndex === currentString.length) {
+            //         isDeleting = true;
+            //         setTimeout(typeWriter, 2000); // Pause at end of word
+            //     } else if (isDeleting && charIndex === 0) {
+            //         isDeleting = false;
+            //         stringIndex = (stringIndex + 1) % typingStrings.length;
+            //         setTimeout(typeWriter, 500); // Pause before next word
+            //     } else {
+            //         const typeSpeed = isDeleting ? 50 : 100;
+            //         setTimeout(typeWriter, typeSpeed);
+            //     }
+            // }
+
+            // // Start typing after page loads
+            // setTimeout(typeWriter, 1500);
+
+            // GSAP Animations
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Hero text animation
+            const heroTimeline = gsap.timeline();
+            heroTimeline
+                .from('.logo', {
+                    duration: 1,
+                    y: -50,
+                    opacity: 0,
+                    ease: "power3.out"
+                })
+                .from('.nav-links li', {
+                    duration: 0.8,
+                    y: -30,
+                    opacity: 0,
+                    stagger: 0.1,
+                    ease: "power3.out"
+                }, "-=0.5")
+                .from('#hero-title', {
+                    duration: 1.5,
+                    y: 50,
+                    opacity: 0,
+                    ease: "power3.out"
+                }, "-=0.3")
+                .from('#hero-subtitle', {
+                    duration: 1.2,
+                    y: 30,
+                    opacity: 0,
+                    ease: "power3.out"
+                }, "-=1")
+                .from('.hero-typing', {
+                    duration: 1,
+                    y: 30,
+                    opacity: 0,
+                    ease: "power3.out"
+                }, "-=0.8")
+                .from('.hero p', {
+                    duration: 1,
+                    y: 30,
+                    opacity: 0,
+                    ease: "power3.out"
+                }, "-=0.5")
+                .from('.hero-btns', {
+                    duration: 1,
+                    y: 30,
+                    opacity: 0,
+                    stagger: 0.2,
+                    ease: "power3.out"
+                }, "-=0.5")
+                .from('.scroll-indicator', {
+                    duration: 1,
+                    y: 30,
+                    opacity: 0,
+                    ease: "power3.out"
+                }, "-=0.3");
+
+            // Skill bars animation with GSAP ScrollTrigger
+            gsap.utils.toArray('.skill-progress').forEach(bar => {
+                const width = bar.getAttribute('data-width');
+
+                gsap.to(bar, {
+                    width: `${width}%`,
+                    duration: 2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: bar.parentElement.parentElement,
+                        start: "top 80%",
+                        toggleActions: "play none none none",
+                        once: true
+                    }
+                });
+            });
+
+            // Animated stats counting
+            const stats = [
+                { id: 'projects-count', target: 4, duration: 2 },
+                { id: 'clients-count', target: 4, duration: 2 },
+                { id: 'experience-count', target: 100, duration: 2 }
+            ];
+
+            stats.forEach(stat => {
+                ScrollTrigger.create({
+                    trigger: `#${stat.id}`,
+                    start: "top 80%",
+                    onEnter: () => {
+                        let count = 0;
+                        const element = document.getElementById(stat.id);
+                        const increment = stat.target / (stat.duration * 60); // 60fps
+
+                        const timer = setInterval(() => {
+                            count += increment;
+                            if (count >= stat.target) {
+                                count = stat.target;
+                                clearInterval(timer);
+                            }
+                            element.textContent = Math.floor(count) + '+';
+                        }, 1000 / 60); // 60fps
+                    },
+                    once: true
+                });
+            });
+
+            // Header scroll effect
+            const header = document.getElementById('header');
+            const backToTop = document.getElementById('backToTop');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+
+                // Back to top button visibility
+                if (window.scrollY > 500) {
+                    backToTop.classList.add('active');
+                } else {
+                    backToTop.classList.remove('active');
+                }
+
+                // Update active nav link based on scroll position
+                updateActiveNavLink();
+            });
+
+            // Mobile menu toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                mobileMenuBtn.innerHTML = navLinks.classList.contains('active')
+                    ? '<i class="fas fa-times"></i>'
+                    : '<i class="fas fa-bars"></i>';
+            });
+
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+
+                // In a real application, you would send this data to a server
+                console.log('Form submitted:', { name, email, subject, message });
+
+                // Show success message with animation
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+
+                submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                submitBtn.style.background = 'linear-gradient(90deg, #00cc00, #00ff88)';
+
+                gsap.to(submitBtn, {
+                    scale: 1.05,
+                    duration: 0.2,
+                    yoyo: true,
+                    repeat: 2,
+                    onComplete: () => {
+                        setTimeout(() => {
+                            submitBtn.innerHTML = originalText;
+                            submitBtn.style.background = '';
+                            contactForm.reset();
+                        }, 2000);
+                    }
+                });
+            });
+
+            // Back to top button animation
+            backToTop.addEventListener('click', function (e) {
+                e.preventDefault();
+                gsap.to(window, {
+                    duration: 0.1,
+                    scrollTo: { y: 0, autoKill: false },
+                    ease: "power3.out"
+                });
+            });
+
+            // Update active nav link based on scroll position
+            function updateActiveNavLink() {
+                const sections = document.querySelectorAll('section');
+                const navLinks = document.querySelectorAll('.nav-links a');
+
+                let currentSection = '';
+                const scrollPosition = window.scrollY + 100;
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        currentSection = '#' + section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === currentSection) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            // Card hover tilt effect
+            const cards = document.querySelectorAll('.glass-card');
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+
+                    const rotateX = (y - centerY) / 25;
+                    const rotateY = (centerX - x) / 25;
+
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-15px) scale(1.02)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale(1)';
+                    setTimeout(() => {
+                        card.style.transform = '';
+                    }, 300);
+                });
+            });
+
+            // Add floating particles to hero background
+            createFloatingShapes();
+        });
+
+        // Create floating shapes animation
+        function createFloatingShapes() {
+            const container = document.querySelector('.particles-container');
+
+            for (let i = 0; i < 15; i++) {
+                const shape = document.createElement('div');
+                shape.classList.add('floating-shape');
+
+                // Random shape type
+                const shapeTypes = ['circle', 'square', 'triangle'];
+                const shapeType = shapeTypes[Math.floor(Math.random() * shapeTypes.length)];
+
+                // Random size
+                const size = Math.random() * 30 + 10;
+
+                // Random position
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+
+                // Random color with blue tint
+                const colors = [
+                    'rgba(0, 102, 255, 0.2)',
+                    'rgba(0, 217, 255, 0.2)',
+                    'rgba(100, 150, 255, 0.2)',
+                    'rgba(50, 100, 255, 0.2)'
+                ];
+                const color = colors[Math.floor(Math.random() * colors.length)];
+
+                // Apply styles
+                shape.style.position = 'absolute';
+                shape.style.width = `${size}px`;
+                shape.style.height = `${size}px`;
+                shape.style.left = `${posX}%`;
+                shape.style.top = `${posY}%`;
+                shape.style.background = color;
+                shape.style.borderRadius = shapeType === 'circle' ? '50%' : shapeType === 'triangle' ? '0' : '5px';
+                shape.style.opacity = '0.3';
+
+                if (shapeType === 'triangle') {
+                    shape.style.width = '0';
+                    shape.style.height = '0';
+                    shape.style.borderLeft = `${size / 2}px solid transparent`;
+                    shape.style.borderRight = `${size / 2}px solid transparent`;
+                    shape.style.borderBottom = `${size}px solid ${color}`;
+                    shape.style.background = 'none';
+                }
+
+                container.appendChild(shape);
+
+                // Animate shape
+                gsap.to(shape, {
+                    x: `+=${Math.random() * 100 - 50}`,
+                    y: `+=${Math.random() * 100 - 50}`,
+                    rotation: Math.random() * 360,
+                    duration: Math.random() * 20 + 10,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut"
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>
