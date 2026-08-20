@@ -19,6 +19,14 @@
 </head>
 
 <body>
+    <script>
+        (function () {
+            var savedTheme = localStorage.getItem('portfolio-theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-theme');
+            }
+        })();
+    </script>
     <!-- Header & Navigation -->
     <header id="header">
         <div class="container">
@@ -27,17 +35,22 @@
                     <div class="logo-icon">MN</div>
                     <span>Muhammad Numan</span>
                 </a>
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#journey">Journey</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <button class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
+                <div class="nav-right">
+                    <ul class="nav-links">
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#journey">Journey</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode" title="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
@@ -283,19 +296,19 @@
                         <div class="skill-info">
                             <div class="skill-name">
                                 <i class="fa-solid fa-paper-plane"></i>
-                                <span>Postman</span>
+                                <span>XAMPP</span>
                             </div>
-                            <span class="skill-percentage">75%</span>
+                            <span class="skill-percentage">95%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" data-width="75"></div>
+                            <div class="skill-progress" data-width="95"></div>
                         </div>
                     </div>
                     <div class="skill-item">
                         <div class="skill-info">
                             <div class="skill-name">
                                 <i class="fa-solid fa-hard-drive"></i>
-                                <span>XAMPP</span>
+                                <span>WAMP</span>
                             </div>
                             <span class="skill-percentage">90%</span>
                         </div>
@@ -795,6 +808,28 @@
                 mobileMenuBtn.innerHTML = navLinks.classList.contains('active')
                     ? '<i class="fas fa-times"></i>'
                     : '<i class="fas fa-bars"></i>';
+            });
+
+            // Dark / Light mode toggle
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = themeToggle.querySelector('i');
+
+            function setThemeIcon() {
+                if (document.body.classList.contains('light-theme')) {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                } else {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                }
+            }
+
+            setThemeIcon();
+
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('light-theme');
+                localStorage.setItem('portfolio-theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+                setThemeIcon();
             });
 
             // Close mobile menu when clicking a link
