@@ -523,6 +523,17 @@
      z-index: -1;
  }
 
+ .floating-shapes-container {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: -1;
+     pointer-events: none;
+     overflow: hidden;
+ }
+
  .hero-content {
      max-width: 800px;
      position: relative;
@@ -603,7 +614,7 @@
 
  .btn-secondary {
      /* border-color: rgba(255, 255, 255, 0.3);*/
-     border-color: var(--accent-neon); 
+     border-color: var(--accent-neon);
  }
 
  .btn-secondary:hover {
@@ -878,7 +889,7 @@
      left: 0;
      width: 100%;
      height: 100%;
-     background: linear-gradient(to top,rgba(10, 10, 10, 0.95), transparent);
+     background: linear-gradient(to top, rgba(10, 10, 10, 0.95), transparent);
      padding: 40px;
      display: flex;
      flex-direction: column;

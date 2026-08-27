@@ -77,16 +77,23 @@
                         <div class="color-popover" id="colorPopover">
                             <p class="color-popover-title">Accent Color</p>
                             <div class="color-popover-row">
-                                <input type="color" id="accentColorInput" value="#0066ff" aria-label="Pick accent color">
+                                <input type="color" id="accentColorInput" value="#0066ff"
+                                    aria-label="Pick accent color">
                                 <span class="color-popover-hex" id="accentColorHex">#0066FF</span>
                             </div>
                             <div class="color-presets">
-                                <button type="button" class="preset-swatch" style="background:#0066ff" data-color="#0066ff" title="Blue"></button>
-                                <button type="button" class="preset-swatch" style="background:#ff2d55" data-color="#ff2d55" title="Red"></button>
-                                <button type="button" class="preset-swatch" style="background:#00c853" data-color="#00c853" title="Green"></button>
-                                <button type="button" class="preset-swatch" style="background:#ff9100" data-color="#ff9100" title="Orange"></button>
-                                <button type="button" class="preset-swatch" style="background:#aa00ff" data-color="#aa00ff" title="Purple"></button>
-                                <button type="button" class="preset-swatch" style="background:#00d9ff" data-color="#00d9ff" title="Cyan"></button>
+                                <button type="button" class="preset-swatch" style="background:#0066ff"
+                                    data-color="#0066ff" title="Blue"></button>
+                                <button type="button" class="preset-swatch" style="background:#ff2d55"
+                                    data-color="#ff2d55" title="Red"></button>
+                                <button type="button" class="preset-swatch" style="background:#00c853"
+                                    data-color="#00c853" title="Green"></button>
+                                <button type="button" class="preset-swatch" style="background:#ff9100"
+                                    data-color="#ff9100" title="Orange"></button>
+                                <button type="button" class="preset-swatch" style="background:#aa00ff"
+                                    data-color="#aa00ff" title="Purple"></button>
+                                <button type="button" class="preset-swatch" style="background:#00d9ff"
+                                    data-color="#00d9ff" title="Cyan"></button>
                             </div>
                             <button type="button" class="color-reset-btn" id="colorResetBtn">Reset to Default</button>
                         </div>
@@ -107,6 +114,7 @@
     <section id="home" class="hero">
         <div class="hero-bg"></div>
         <div class="particles-container" id="particles"></div>
+        <div class="floating-shapes-container" id="floatingShapes"></div>
         <div class="container">
             <div class="hero-content">
                 <h1 id="hero-title">Hi, I'm <span class="accent-text">Muhammad Numan</span></h1>
@@ -586,11 +594,14 @@
                                 class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/muhammad-numan-762978401/" target="_blank"
                             class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.facebook.com/chnoman.tanveer" target="_blank" class="social-link"><i class="fa-brands fa-square-facebook"></i>
+                        <a href="https://www.facebook.com/chnoman.tanveer" target="_blank" class="social-link"><i
+                                class="fa-brands fa-square-facebook"></i>
                         </a>
-                        <a href="https://www.instagram.com/numan_thedeveloper/" target="_blank" class="social-link"><i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/numan_thedeveloper/" target="_blank" class="social-link"><i
+                                class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="https://wa.me/923283571282" target="_blank" class="social-link"><i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/923283571282" target="_blank" class="social-link"><i
+                                class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
@@ -666,20 +677,38 @@
             mirror: true
         });
 
-        // Initialize Particles.js
-        document.addEventListener('DOMContentLoaded', function () {
-            // Initialize particles background
+        // Initialize Particles.js with current accent color
+        function initNetworkParticles() {
+            const styles = getComputedStyle(document.documentElement);
+            const accentColor = styles.getPropertyValue('--accent-blue').trim() || '#0066ff';
+            const neonColor = styles.getPropertyValue('--accent-neon').trim() || '#00d9ff';
+
+            // Properly destroy any existing particles.js instance first
+            if (window.pJSDom && window.pJSDom.length) {
+                window.pJSDom.forEach(function (dom) {
+                    if (dom.pJS && dom.pJS.fn && dom.pJS.fn.vendors && dom.pJS.fn.vendors.destroypJS) {
+                        dom.pJS.fn.vendors.destroypJS();
+                    }
+                });
+                window.pJSDom = [];
+            }
+            const particlesEl = document.getElementById('particles');
+            if (particlesEl) {
+                const oldCanvas = particlesEl.querySelector('canvas');
+                if (oldCanvas) oldCanvas.remove();
+            }
+
             particlesJS('particles', {
                 particles: {
                     number: { value: 80, density: { enable: true, value_area: 800 } },
-                    color: { value: "#00d9ff" },
+                    color: { value: neonColor },
                     shape: { type: "circle" },
                     opacity: { value: 0.5, random: true },
                     size: { value: 3, random: true },
                     line_linked: {
                         enable: true,
                         distance: 150,
-                        color: "#0066ff",
+                        color: accentColor,
                         opacity: 0.2,
                         width: 1
                     },
@@ -702,6 +731,12 @@
                 },
                 retina_detect: true
             });
+        }
+
+        // Initialize Particles.js
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize particles background
+            initNetworkParticles();
 
             // Hero typing animation
             // const typingContent = document.getElementById('typing-content');
@@ -912,11 +947,21 @@
             accentColorInput.value = savedAccent;
             accentColorHex.textContent = savedAccent.toUpperCase();
 
+            let particlesDebounce;
             function setAccent(hex) {
                 window.applyAccentColor(hex);
                 accentColorInput.value = hex;
                 accentColorHex.textContent = hex.toUpperCase();
                 localStorage.setItem('portfolio-accent', hex);
+                if (typeof createFloatingShapes === 'function') {
+                    createFloatingShapes();
+                }
+                clearTimeout(particlesDebounce);
+                particlesDebounce = setTimeout(() => {
+                    if (typeof initNetworkParticles === 'function') {
+                        initNetworkParticles();
+                    }
+                }, 120);
             }
 
             colorToggle.addEventListener('click', (e) => {
@@ -1072,8 +1117,33 @@
         });
 
         // Create floating shapes animation
+        function getAccentShapeColors() {
+            const styles = getComputedStyle(document.documentElement);
+            const blue = styles.getPropertyValue('--accent-blue').trim() || '#0066ff';
+            const neon = styles.getPropertyValue('--accent-neon').trim() || '#00d9ff';
+
+            function toRgba(hex, alpha) {
+                hex = hex.replace('#', '');
+                if (hex.length === 3) {
+                    hex = hex.split('').map(c => c + c).join('');
+                }
+                const num = parseInt(hex, 16);
+                const r = (num >> 16) & 255, g = (num >> 8) & 255, b = num & 255;
+                return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+            }
+
+            return [
+                toRgba(blue, 0.2),
+                toRgba(neon, 0.2),
+                toRgba(blue, 0.15),
+                toRgba(neon, 0.15)
+            ];
+        }
+
         function createFloatingShapes() {
-            const container = document.querySelector('.particles-container');
+            const container = document.getElementById('floatingShapes');
+            container.innerHTML = '';
+            const colors = getAccentShapeColors();
 
             for (let i = 0; i < 15; i++) {
                 const shape = document.createElement('div');
@@ -1090,13 +1160,7 @@
                 const posX = Math.random() * 100;
                 const posY = Math.random() * 100;
 
-                // Random color with blue tint
-                const colors = [
-                    'rgba(0, 102, 255, 0.2)',
-                    'rgba(0, 217, 255, 0.2)',
-                    'rgba(100, 150, 255, 0.2)',
-                    'rgba(50, 100, 255, 0.2)'
-                ];
+                // Color based on current accent theme
                 const color = colors[Math.floor(Math.random() * colors.length)];
 
                 // Apply styles
