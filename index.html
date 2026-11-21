@@ -814,7 +814,7 @@
                     stringIndex = (stringIndex + 1) % typingStrings.length;
                     setTimeout(typeWriter, 500); // Pause before next word
                 } else {
-                    const typeSpeed = isDeleting ? 50 : 100;
+                    const typeSpeed = isDeleting ? 30 : 70;
                     setTimeout(typeWriter, typeSpeed);
                 }
             }
