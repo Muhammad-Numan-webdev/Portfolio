@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Numan | Full Stack Developer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="claude.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
         integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -14,44 +14,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/TextPlugin.min.js"></script>
 
 </head>
 
 <body>
-    <script>
-        (function () {
-            var savedTheme = localStorage.getItem('portfolio-theme');
-            if (savedTheme === 'light') {
-                document.body.classList.add('light-theme');
-            }
-
-            // Apply saved accent color immediately (avoids color flash on load)
-            function hexToRgbParts(hex) {
-                var num = parseInt(hex.replace('#', ''), 16);
-                return { r: (num >> 16) & 255, g: (num >> 8) & 255, b: num & 255 };
-            }
-            function lightenHex(hex, amt) {
-                var c = hexToRgbParts(hex);
-                var r = Math.min(255, c.r + amt);
-                var g = Math.min(255, c.g + amt);
-                var b = Math.min(255, c.b + amt);
-                return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-            }
-            window.applyAccentColor = function (hex) {
-                var c = hexToRgbParts(hex);
-                var root = document.documentElement;
-                root.style.setProperty('--accent-blue', hex);
-                root.style.setProperty('--accent-neon', lightenHex(hex, 90));
-                root.style.setProperty('--accent-glow', 'rgba(' + c.r + ', ' + c.g + ', ' + c.b + ', 0.4)');
-            };
-
-            var savedAccent = localStorage.getItem('portfolio-accent');
-            if (savedAccent) {
-                window.applyAccentColor(savedAccent);
-            }
-        })();
-    </script>
     <!-- Header & Navigation -->
     <header id="header">
         <div class="container">
@@ -112,23 +78,22 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-bg"></div>
         <div class="particles-container" id="particles"></div>
         <div class="floating-shapes-container" id="floatingShapes"></div>
         <div class="container">
             <div class="hero-content">
                 <h1 id="hero-title">Hi, I'm <span class="accent-text">Muhammad Numan</span></h1>
                 <h2 id="hero-subtitle">Full Stack Developer</h2>
-                <!-- <div class="hero-typing" id="typing-text">
+                <div class="hero-typing" id="typing-text">
                     Building digital experiences that <span id="typing-content"></span><span class="cursor"></span>
-                </div> -->
+                </div>
                 <p>I create exceptional web applications using modern technologies. With expertise in both frontend and
                     backend development, I bring ideas to life with clean code and innovative solutions.</p>
                 <div class="hero-btns">
                     <a href="#projects" class="btn btn-primary">
                         <i class="fas fa-rocket"></i> View Projects
                     </a>
-                    <a href="image/My-CV.pdf" download="image/My-CV.pdf" class="btn btn-secondary">
+                    <a href="image/Muhammad Numan CV.pdf" download="Muhammad Numan CV.pdf" class="btn btn-secondary">
                         <i class="fas fa-download"></i> Download CV
                     </a>
                 </div>
@@ -710,7 +675,6 @@
     <!-- JavaScript Libraries -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
     <script>
 
@@ -722,6 +686,38 @@
             once: false,
             mirror: false
         });
+
+        (function () {
+            var savedTheme = localStorage.getItem('portfolio-theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-theme');
+            }
+
+            // Apply saved accent color immediately (avoids color flash on load)
+            function hexToRgbParts(hex) {
+                var num = parseInt(hex.replace('#', ''), 16);
+                return { r: (num >> 16) & 255, g: (num >> 8) & 255, b: num & 255 };
+            }
+            function lightenHex(hex, amt) {
+                var c = hexToRgbParts(hex);
+                var r = Math.min(255, c.r + amt);
+                var g = Math.min(255, c.g + amt);
+                var b = Math.min(255, c.b + amt);
+                return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+            }
+            window.applyAccentColor = function (hex) {
+                var c = hexToRgbParts(hex);
+                var root = document.documentElement;
+                root.style.setProperty('--accent-blue', hex);
+                root.style.setProperty('--accent-neon', lightenHex(hex, 90));
+                root.style.setProperty('--accent-glow', 'rgba(' + c.r + ', ' + c.g + ', ' + c.b + ', 0.4)');
+            };
+
+            var savedAccent = localStorage.getItem('portfolio-accent');
+            if (savedAccent) {
+                window.applyAccentColor(savedAccent);
+            }
+        })();
 
         // Initialize Particles.js with current accent color
         function initNetworkParticles() {
@@ -785,43 +781,43 @@
             initNetworkParticles();
 
             // Hero typing animation
-            // const typingContent = document.getElementById('typing-content');
-            // const typingStrings = [
-            //     'solve real problems.',
-            //     'create seamless experiences.',
-            //     'push technical boundaries.',
-            //     'deliver exceptional value.'
-            // ];
-            // let stringIndex = 0;
-            // let charIndex = 0;
-            // let isDeleting = false;
+            const typingContent = document.getElementById('typing-content');
+            const typingStrings = [
+                'solve real problems.',
+                'create seamless experiences.',
+                'push technical boundaries.',
+                'deliver exceptional value.'
+            ];
+            let stringIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
 
-            // function typeWriter() {
-            //     const currentString = typingStrings[stringIndex];
+            function typeWriter() {
+                const currentString = typingStrings[stringIndex];
 
-            //     if (isDeleting) {
-            //         typingContent.textContent = currentString.substring(0, charIndex - 1);
-            //         charIndex--;
-            //     } else {
-            //         typingContent.textContent = currentString.substring(0, charIndex + 1);
-            //         charIndex++;
-            //     }
+                if (isDeleting) {
+                    typingContent.textContent = currentString.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typingContent.textContent = currentString.substring(0, charIndex + 1);
+                    charIndex++;
+                }
 
-            //     if (!isDeleting && charIndex === currentString.length) {
-            //         isDeleting = true;
-            //         setTimeout(typeWriter, 2000); // Pause at end of word
-            //     } else if (isDeleting && charIndex === 0) {
-            //         isDeleting = false;
-            //         stringIndex = (stringIndex + 1) % typingStrings.length;
-            //         setTimeout(typeWriter, 500); // Pause before next word
-            //     } else {
-            //         const typeSpeed = isDeleting ? 50 : 100;
-            //         setTimeout(typeWriter, typeSpeed);
-            //     }
-            // }
+                if (!isDeleting && charIndex === currentString.length) {
+                    isDeleting = true;
+                    setTimeout(typeWriter, 2000); // Pause at end of word
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    stringIndex = (stringIndex + 1) % typingStrings.length;
+                    setTimeout(typeWriter, 500); // Pause before next word
+                } else {
+                    const typeSpeed = isDeleting ? 50 : 100;
+                    setTimeout(typeWriter, typeSpeed);
+                }
+            }
 
-            // // Start typing after page loads
-            // setTimeout(typeWriter, 1500);
+            // Start typing after page loads
+            setTimeout(typeWriter, 1500);
 
             // GSAP Animations
             gsap.registerPlugin(ScrollTrigger);
@@ -1095,16 +1091,6 @@
                             contactForm.reset();
                         }, 2000);
                     }
-                });
-            });
-
-            // Back to top button animation
-            backToTop.addEventListener('click', function (e) {
-                e.preventDefault();
-                gsap.to(window, {
-                    duration: 0.1,
-                    scrollTo: { y: 0, autoKill: false },
-                    ease: "power3.out"
                 });
             });
 
